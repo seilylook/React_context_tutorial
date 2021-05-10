@@ -5,6 +5,15 @@ const colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
 
 class SelectColors extends Component {
   static contextType = ColorContext;
+
+  handleSetColor = color => {
+    this.context.actions.setColor(color);
+  };
+
+  handleSetColor = subcolor => {
+    this.context.actions.setSubcolor(subcolor);
+  };
+
   render() {
     return (
       <div>
